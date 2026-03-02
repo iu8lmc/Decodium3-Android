@@ -1,0 +1,81 @@
+# Build directories
+build/
+build-android/
+build-bridge/
+bridge/build*/
+
+# Prebuilt ARM toolchain (2+ GB, download separately)
+prebuilt/toolchain/
+prebuilt/aarch64-none-linux-gnu/
+prebuilt/bin/
+prebuilt/lib/
+prebuilt/libexec/
+prebuilt/share/
+prebuilt/include/
+prebuilt/data/
+prebuilt/manifest.txt
+prebuilt/build-arm64/
+
+# Keep prebuilt/android-arm64-v8a/ (prebuilt .a libraries)
+# Keep prebuilt/scripts/ (build scripts)
+# Keep prebuilt/README.md
+
+# Backup files
+*.bak
+*.orig
+*.save
+
+# Logs
+*.log
+
+# Temporary files
+chronogps_tmp/
+*.tmp
+*~
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Qt generated
+*.pro.user
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# Fortran module files (generated during build)
+*.mod
+*.smod
+
+# Object files
+*.o
+*.obj
+*.lib
+*.exe
+*.dll
+
+# Static libraries (except prebuilt Android libs)
+*.a
+!prebuilt/android-*/lib*.a
+
+# Installer artifacts
+*.msi
+*.nsis
+sign_installer.ps1
+sign_installers.bat
+sign_all*.ps1
+regen_and_sign.ps1
+
+# Temp HTML / verification pages
+index_*.html
+
+# Misc
+ERRATA_*.md
+artwork/

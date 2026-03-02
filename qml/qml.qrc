@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/Theme.qml</file>
+        <file>qml/qmldir</file>
+        <file>qml/components/HeaderBar.qml</file>
+        <file>qml/components/FrequencyDisplay.qml</file>
+        <file>qml/components/AudioMeter.qml</file>
+        <file>qml/components/BandButton.qml</file>
+        <file>qml/components/ModeButton.qml</file>
+        <file>qml/components/FeatureToggle.qml</file>
+        <file>qml/components/DecodeLine.qml</file>
+        <file>qml/components/StatusBadge.qml</file>
+        <file>qml/components/TxButton.qml</file>
+        <file>qml/components/CountdownTimer.qml</file>
+        <file>qml/components/MoonClock.qml</file>
+        <file>qml/panels/WaterfallPanel.qml</file>
+        <file>qml/panels/DecodePanel.qml</file>
+        <file>qml/panels/DecodePanelRow.qml</file>
+        <file>qml/panels/BottomToolbar.qml</file>
+        <file>qml/panels/StatusBar.qml</file>
+        <file>qml/panels/TxButtonRow.qml</file>
+        <file>qml/dialogs/SettingsDialog.qml</file>
+        <file>qml/dialogs/LogQSODialog.qml</file>
+        <file>qml/dialogs/AboutDialog.qml</file>
+    </qresource>
+</RCC>

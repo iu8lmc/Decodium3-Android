@@ -1,0 +1,58 @@
+# GitHub Actions workflow: Cross-compile wsjt_fort for Android ARM64
+# Usage: copy to .github/workflows/ and push, or run manually
+#
+# Downloads the output artifact: prebuilt-android-arm64-v8a.zip
+# containing libwsjt_fort.a, libfftw3f.a, libgfortran.a
+
+name: Build Android ARM64 Libraries
+
+on:
+  workflow_dispatch:  # Manual trigger
+  push:
+    paths:
+      - 'lib/**'
+      - 'prebuilt/scripts/**'
+
+jobs:
+  build-arm64:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install cross-compilation tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq \
+            gfortran-aarch64-linux-gnu \
+            gcc-aarch64-linux-gnu \
+            g++-aarch64-linux-gnu \
+            binutils-aarch64-linux-gnu \
+            libboost-dev \
+            wget make
+
+      - name: Show tool versions
+        run: |
+          aarch64-linux-gnu-gfortran --version | head -1
+          aarch64-linux-gnu-gcc --version | head -1
+
+      - name: Run build script
+        run: |
+          chmod +x prebuilt/scripts/build_android_arm64.sh
+          bash prebuilt/scripts/build_android_arm64.sh \
+            --source "$GITHUB_WORKSPACE" \
+            --skip-deps
+
+      - name: List outputs
+        run: |
+          ls -lh prebuilt/android-arm64-v8a/
+          file prebuilt/android-arm64-v8a/*.a
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: prebuilt-android-arm64-v8a
+          path: prebuilt/android-arm64-v8a/
+          retention-days: 90

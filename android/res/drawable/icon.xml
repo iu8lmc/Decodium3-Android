@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#0a0e18"
+        android:pathData="M54,54m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0" />
+
+    <!-- Outer ring (accent cyan) -->
+    <path
+        android:fillColor="#00d4ff"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
+        android:strokeWidth="3"
+        android:strokeColor="#00d4ff" />
+    <path
+        android:fillColor="#0a0e18"
+        android:pathData="M54,54m-37,0a37,37 0,1 1,74 0a37,37 0,1 1,-74 0" />
+
+    <!-- Stylized "D3" text - D -->
+    <path
+        android:fillColor="#00d4ff"
+        android:pathData="M32,38 L32,70 L44,70 C52,70 58,64 58,54 C58,44 52,38 44,38 Z M38,44 L43,44 C49,44 52,48 52,54 C52,60 49,64 43,64 L38,64 Z" />
+
+    <!-- Stylized "D3" text - 3 -->
+    <path
+        android:fillColor="#00d4ff"
+        android:pathData="M62,38 L78,38 L78,44 L68,44 L68,51 L76,51 L76,57 L68,57 L68,64 L78,64 L78,70 L62,70 L62,64 L62,57 L62,51 L62,44 Z" />
+
+    <!-- WiFi signal arcs (top) -->
+    <path
+        android:fillColor="#00ff00"
+        android:strokeWidth="2"
+        android:strokeColor="#00ff00"
+        android:pathData="M54,22 Q62,26 62,30"
+        android:fillAlpha="0" />
+    <path
+        android:fillColor="#00ff00"
+        android:strokeWidth="2"
+        android:strokeColor="#00ff00"
+        android:pathData="M54,18 Q66,24 66,30"
+        android:fillAlpha="0" />
+
+    <!-- Small dot (WiFi center) -->
+    <path
+        android:fillColor="#00ff00"
+        android:pathData="M54,28m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+</vector>
